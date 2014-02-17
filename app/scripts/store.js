@@ -1,0 +1,1 @@
+RoutineManagerEmber.ApplicationAdapter = DS.FixtureAdapter;
