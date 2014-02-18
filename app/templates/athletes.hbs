@@ -1,0 +1,9 @@
+<h1>Athletes</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'athlete' this}}{{this.id}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

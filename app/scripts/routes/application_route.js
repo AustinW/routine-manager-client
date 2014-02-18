@@ -5,3 +5,9 @@ RoutineManagerEmber.ApplicationRoute = Ember.Route.extend({
         return ['red', 'yellow', 'blue'];
     }
 });
+
+// RoutineManagerEmber.AthletesRoute = Ember.Route.extend({
+// 	model: function() {
+// 		return this.store.find('athlete');
+// 	}
+// });

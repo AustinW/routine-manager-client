@@ -1,1 +1,4 @@
-RoutineManagerEmber.ApplicationAdapter = DS.FixtureAdapter;
+// DS.RESTAdapter.reopen({})
+
+RoutineManagerEmber.ApplicationAdapter = DS.FixtureAdapter.extend();
+

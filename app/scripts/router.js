@@ -1,3 +1,10 @@
 RoutineManagerEmber.Router.map(function () {
-  // Add your routes here
+  
+  this.resource('athletes', function(){
+    this.resource('athlete', { path: '/:athlete_id' }, function(){
+      this.route('edit');
+    });
+    this.route('create');
+  });
+  
 });
