@@ -1,9 +1,3 @@
-<h1>Athletes</h1>
+{{ outlet }}
 
-<ul>
- {{#each model}}
- <li>{{#link-to 'athlete' this}}{{this.id}}{{/link-to}}</li>
-  {{/each}}
-</ul>
-
-{{outlet}}
+{{ outlet modal }}

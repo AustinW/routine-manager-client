@@ -1,18 +1,17 @@
-<h1>Athlete</h1>
+{{#modal-dialog action="close"}}
+  
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    ...
+  </div>
+  <div class="modal-footer">
+    <button type="button" {{action 'close'}} class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" {{action 'save'}} class="btn btn-primary">Update</button>
+  </div>
 
-<table>
-  {{#each buffer}}
-  <tr>
-    <td>
-      <strong>{{key}}:</strong>
-    </td>
-    <td>
-      {{input value=value}}
-    </td>
-  </tr>
-  {{/each}}
-</table>
-
-<button {{action 'save'}}>Update</button>
+{{/modal-dialog}}
 
 {{outlet}}
