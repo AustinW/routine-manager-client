@@ -1,20 +1,17 @@
 RoutineManagerEmber.AthleteEditView = Ember.View.extend({
-	templateName: "athlete/edit",
-	title: "",
-	content: "",
-	classNames: ["modal", "fade"],
+    templateName: 'athlete/edit',
 
-	didInsertElement: function() {
-		this.$().modal('show');
-		this.$().one("hidden", this._viewDidHide);
-	},
+    didInsertElement: function() {
+        this.$('#athleteEditModal').modal('show');
+        this.$('#athleteEditModal').on('hidden.bs.modal', $.proxy(this._viewDidHide, this));
+    },
 
-	// Modal dismissed
-	_viewDidHide: function() {
-		if ( ! this.isDestroyed) this.destroy();
-	},
+    // Modal dismissed
+    _viewDidHide: function() {
+        this.get('controller').transitionToRoute('athlete');
+    },
 
-	close: function() {
-		this.$(".close").click();
-	}
+    close: function() {
+        this.$('.close').click();
+    }
 });

@@ -1,49 +1,50 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="row">
-                <div class="col-sm-6 col-md-2">
-                  <i {{bind-attr class=":fa genderClass"}} style="font-size:160px"></i>
-                </div>
-                <div class="col-sm-6 col-md-10">
-                  <h1 class="athlete-header">{{ fullName }}</h1>
-                  <i class="fa fa-edit athlete-edit"></i>
-                  <p style="margin-top:20px">
-                    <span><i class="fa fa-group"></i> {{ team }}</span><br />
-                    <span><i class="fa fa-calendar"></i> {{ format-date birthday 'LL' }}</span><br />
-                  </p>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="row">
+          <div class="col-sm-6 col-md-2">
+            <i {{bind-attr class=":fa genderClass"}} style="font-size:160px"></i>
+          </div>
+          <div class="col-sm-6 col-md-10">
+            <h1 class="athlete-header">{{ fullName }}</h1>
+            <i class="fa fa-edit athlete-edit"></i>
+            <p style="margin-top:20px">
+              <span><i class="fa fa-group"></i> {{ team }}</span><br />
+              <span><i class="fa fa-calendar"></i> {{ format-date birthday 'LL' }}</span><br />
+            </p>
+          </div>
+      </div>
 
-            <div class="row">
-              <div class="col-lg-3">
-                <h4>Trampoline</h4>
-                <label for="trampoline_level">Level:</label>
-                {{!-- {{ view Ember.Select content=RoutineManager.athleteLevels optionValuePath=content.key optionLabelPath=content.label }} --}}
-                <select name="trampoline_level">
-                  <option></option>
-                </select>
-              </div>
-              <div class="col-lg-3">
-                <h4>Synchro</h4>
-              </div>
-              <div class="col-lg-3">
-                <h4>Double Mini</h4>
-              </div>
-              <div class="col-lg-3">
-                <h4>Tumbling</h4>
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h4>Trampoline</h4>
+          <label for="trampoline_level">Level:</label>
+          {{!-- {{ view Ember.Select content=RoutineManager.athleteLevels optionValuePath=content.key optionLabelPath=content.label }} --}}
+          <select name="trampoline_level">
+            <option></option>
+          </select>
         </div>
+        <div class="col-lg-3">
+          <h4>Synchro</h4>
+        </div>
+        <div class="col-lg-3">
+          <h4>Double Mini</h4>
+        </div>
+        <div class="col-lg-3">
+          <h4>Tumbling</h4>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="row">
+    <button class="btn btn-info" {{action 'showEditAthlete'}}>Edit</button>
+  </div>
 </div>
 
-{{!-- {{#modal-dialog 'test'}}{{/modal-dialog}} --}}
-
-{{!-- <a href="#" class="btn btn-info" {{action openModal 'athlete/edit'}}>Edit {{fullName}}</a> --}}
-
-{{!-- {{#link-to 'athlete.edit' model class="btn btn-info"}}Edit {{fullName}} {{/link-to}} --}}
-
-<button {{action 'openModal' 'athlete.edit' this}}>Edit {{fullName}}</button>
+{{!-- {{bs-button title="Edit" clicked="show" class="btn btn-info"}}
+{{#bs-modal name="myModal" fade=true footerButtonsBinding="myModalButtons" title="My Modal"}}
+    <p>Modal content!</p>
+{{/bs-modal}} --}}
 
 {{outlet}}
