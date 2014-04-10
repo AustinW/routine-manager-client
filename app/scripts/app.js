@@ -1,9 +1,9 @@
 var RoutineManagerEmber = window.RoutineManagerEmber = Ember.Application.create({
-	LOG_TRANSITIONS: true
+    LOG_TRANSITIONS: true
 });
 
 Ember.onerror = function(error) {
-	console.log(error.stack);
+    console.log(error.stack);
 };
 
 /* Order and include as you please. */
@@ -14,3 +14,4 @@ require('scripts/routes/*');
 require('scripts/views/*');
 require('scripts/router');
 require('scripts/helpers');
+require('scripts/components/*');
